@@ -1,6 +1,8 @@
 # Site settings
 title: SmartHomeGuy
 description: Home automation projects, tutorials, and code snippets
+baseurl: "/SmartHomeGuy" # Your repository name
+url: "https://mslmediamyles.github.io" # Your GitHub Pages URL
 
 # Build settings
 markdown: kramdown
