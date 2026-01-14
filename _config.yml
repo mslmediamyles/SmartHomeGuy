@@ -2,7 +2,7 @@
 title: SmartHomeGuy
 description: Home automation projects, tutorials, and code snippets
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://yourusername.github.io" # Update with your GitHub username
+url: "https://mslmediamyles.github.io" # Update with your GitHub username
 
 # Build settings
 markdown: kramdown
