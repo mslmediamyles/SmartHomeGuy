@@ -1,281 +1,178 @@
-# SmartHomeGuy - GitHub Pages Blog
+# SmartHomeGuy - GitHub Pages Blog (CSS FIXED)
 
-A modern, tech-focused blog for smart home automation, IoT projects, and code snippets. Built with Jekyll and designed for GitHub Pages.
+## 🔥 ISSUE FIXED
 
-## Features
+If your site loaded but had **no styling** (looked like plain text with blue links), this version fixes it!
 
-- 🎨 **Distinctive Design**: Dark theme with monospace aesthetics and neon green accents
-- 📝 **Easy Post Management**: Simply add Markdown files to `_posts/` directory
-- 💻 **Code Snippet Support**: Syntax highlighting with Monokai-inspired theme
-- 📱 **Responsive**: Works perfectly on desktop, tablet, and mobile
-- ⚡ **Fast**: Static site generation with Jekyll
-- 🔍 **SEO-Friendly**: Proper meta tags and structured content
+**What was wrong:** CSS path issues with GitHub Pages
+**What I fixed:** Moved CSS/JS to root folders with simpler paths
 
-## Quick Start
+---
 
-### 1. Setup GitHub Repository
+## 🚀 Setup Instructions
 
-1. Create a new repository named `yourusername.github.io` (replace `yourusername` with your GitHub username)
-2. Upload all files from this folder to your repository
-3. Go to repository Settings → Pages
-4. Under "Source", select the `main` branch and `/ (root)` folder
-5. Click Save
+### Step 1: Delete Old Files (If you uploaded before)
+1. Go to your repository on GitHub
+2. Select all files → Delete
+3. Commit the deletion
 
-Your site will be live at `https://yourusername.github.io` in a few minutes!
+### Step 2: Upload This Fixed Version
+1. Download and unzip this folder
+2. In your repository, click "Add file" → "Upload files"
+3. Drag **ALL** files from the unzipped folder
+4. **IMPORTANT:** Make sure you see these folders:
+   - `_layouts/`
+   - `_posts/`
+   - `css/` (NOT assets/css!)
+   - `js/` (NOT assets/js!)
+5. Commit changes
 
-### 2. Customize Your Site
+### Step 3: Enable GitHub Pages
+1. Go to Settings → Pages
+2. Source: `main` branch, `/ (root)` folder
+3. Click Save
 
-Edit `_config.yml` to update:
+### Step 4: Wait & Visit
+- Wait **2-5 minutes**
+- Visit `https://yourusername.github.io`
+- You should now see:
+  - ✅ Dark background
+  - ✅ Green neon accents
+  - ✅ Styled post cards
+  - ✅ Proper fonts
 
-```yaml
-title: SmartHomeGuy
-description: Your description here
-url: "https://yourusername.github.io"  # Update with your username
+---
+
+## ✅ Verify It's Working
+
+Your site should look like this:
+- **Dark background** (#0a0e14)
+- **Neon green** accents (#00e676)
+- **Monospace font** for body text
+- **Styled cards** for blog posts
+- **Navigation bar** with green underline hover effect
+
+If you still see plain text with blue links, check:
+1. Did you upload the `css/` folder?
+2. Is it `css/style.css` not `assets/css/style.css`?
+3. Wait 5 full minutes and hard refresh (Ctrl+Shift+R)
+
+---
+
+## 📁 Correct File Structure
+
+```
+yourusername.github.io/
+├── _config.yml
+├── _layouts/
+│   ├── default.html
+│   └── post.html
+├── _posts/
+│   └── (your markdown posts here)
+├── css/                 ← CSS here, NOT in assets/css!
+│   ├── style.css
+│   └── syntax.css
+├── js/                  ← JS here, NOT in assets/js!
+│   └── main.js
+├── index.html
+├── archive.html
+└── about.html
 ```
 
-Update the GitHub link in `_layouts/default.html` and `about.html`.
+---
 
-### 3. Add Your First Post
+## ✍️ Adding New Posts
 
-Create a new file in the `_posts/` directory with this naming format:
-```
-YYYY-MM-DD-title-of-post.md
-```
-
-Example: `2026-01-15-my-first-post.md`
-
-Use this template:
+Create file: `_posts/2026-01-15-my-post.md`
 
 ```markdown
 ---
 layout: post
-title: "Your Post Title"
+title: "My Post Title"
 date: 2026-01-15
-category: Home Automation
-description: "A brief description of your post"
+category: Smart Home
 ---
 
 Your content here...
 
-## Using Code Snippets
-
 ```python
-def hello_world():
-    print("Hello, Smart Home!")
+# Code with syntax highlighting
+def hello():
+    print("Hello!")
+```
 ```
 
-More content...
-```
-
-## Writing Posts
-
-### Front Matter
-
-Every post needs front matter at the top:
-
-```yaml
----
-layout: post
-title: "Your Title"
-date: YYYY-MM-DD
-category: Home Automation  # Optional
-description: "Brief description"  # Optional
----
-```
-
-### Adding Code Snippets
-
-Use triple backticks with language specification:
-
-````markdown
-```python
-def my_function():
-    return "Code here"
-```
-````
-
-Supported languages include: python, yaml, cpp, javascript, bash, and many more.
-
-### Formatting
-
-- **Headers**: Use `##` for H2, `###` for H3, etc.
-- **Bold**: `**bold text**`
-- **Italic**: `*italic text*`
-- **Links**: `[text](url)`
-- **Lists**: Use `-` or `1.` for bullet and numbered lists
-- **Blockquotes**: Start line with `>`
-
-### Example Post Structure
-
-```markdown
----
-layout: post
-title: "My Awesome Project"
-date: 2026-01-15
-category: IoT
 ---
 
-Introduction paragraph...
+## 🎨 Customization
 
-## Prerequisites
-
-- Item 1
-- Item 2
-
-## Step 1: Setup
-
-Explanation text...
-
-```python
-# Code example
-print("Hello")
-```
-
-## Conclusion
-
-Wrap up...
-```
-
-## Project Structure
-
-```
-smarthomeguy-site/
-├── _config.yml           # Site configuration
-├── _layouts/
-│   ├── default.html      # Main layout template
-│   └── post.html         # Post layout template
-├── _posts/               # Your blog posts go here
-│   ├── 2026-01-14-automating-smart-home-with-home-assistant.md
-│   └── 2026-01-12-esp32-temperature-monitor.md
-├── assets/
-│   ├── css/
-│   │   ├── style.css     # Main stylesheet
-│   │   └── syntax.css    # Code syntax highlighting
-│   └── js/
-│       └── main.js       # JavaScript functionality
-├── index.html            # Homepage
-├── archive.html          # All posts archive
-├── about.html            # About page
-└── README.md             # This file
-```
-
-## Customization
-
-### Colors
-
-Edit CSS variables in `assets/css/style.css`:
-
+### Change Colors
+Edit `css/style.css`:
 ```css
 :root {
-  --color-bg: #0a0e14;
-  --color-accent: #00e676;
-  /* ... more colors */
+  --color-bg: #0a0e14;      /* Background */
+  --color-accent: #00e676;  /* Accent (green) */
 }
 ```
 
-### Fonts
-
-The site uses:
-- **Sometype Mono** for body text (monospace)
-- **Darker Grotesque** for headings
-
-Change fonts in `_layouts/default.html` by updating the Google Fonts link.
-
-### Navigation
-
-Edit the navigation links in `_layouts/default.html`:
-
-```html
-<ul class="nav-links">
-  <li><a href="/">Posts</a></li>
-  <li><a href="/archive">Archive</a></li>
-  <li><a href="/about">About</a></li>
-</ul>
-```
-
-## Advanced Features
-
-### Categories
-
-Organize posts by category in the front matter:
-
+### Change Title
+Edit `_config.yml`:
 ```yaml
-category: Home Automation
+title: Your Site Name
+description: Your description
 ```
-
-Categories appear as tags on post cards and in the post header.
-
-### Copy Code Buttons
-
-Code blocks automatically get "Copy" buttons thanks to `assets/js/main.js`.
-
-### Syntax Highlighting
-
-Uses Rouge syntax highlighter with a custom Monokai-inspired theme in `assets/css/syntax.css`.
-
-## Local Development
-
-To test locally before publishing:
-
-1. Install Jekyll:
-   ```bash
-   gem install jekyll bundler
-   ```
-
-2. Create a Gemfile:
-   ```ruby
-   source 'https://rubygems.org'
-   gem 'github-pages', group: :jekyll_plugins
-   ```
-
-3. Install dependencies:
-   ```bash
-   bundle install
-   ```
-
-4. Run local server:
-   ```bash
-   bundle exec jekyll serve
-   ```
-
-5. Visit `http://localhost:4000`
-
-## Tips for Success
-
-1. **Post Regularly**: Consistency is key for building an audience
-2. **Use Descriptive Titles**: Help readers find what they're looking for
-3. **Include Code Comments**: Make your snippets easy to understand
-4. **Add Screenshots**: Visual content enhances tutorials
-5. **Link to Resources**: Help readers learn more
-6. **Test Your Code**: Verify all code snippets work before posting
-
-## Troubleshooting
-
-**Site not updating after push:**
-- Wait 2-5 minutes for GitHub Pages to rebuild
-- Check the Actions tab in your repository for build status
-- Verify your `_config.yml` is valid YAML
-
-**Code highlighting not working:**
-- Ensure you're using triple backticks with language name
-- Check that `_config.yml` has the highlighter setting
-
-**Styles not loading:**
-- Verify `baseurl` in `_config.yml` is correct
-- Check browser console for 404 errors
-
-## Resources
-
-- [Jekyll Documentation](https://jekyllrb.com/docs/)
-- [GitHub Pages Documentation](https://docs.github.com/en/pages)
-- [Markdown Guide](https://www.markdownguide.org/)
-- [Rouge Syntax Highlighter](https://github.com/rouge-ruby/rouge)
-
-## License
-
-This template is free to use and modify for your own projects.
 
 ---
 
-Built with ❤️ for the smart home community
-```
+## 🆘 Still Having Issues?
+
+**Site shows plain text (no colors/styling):**
+- Make sure `css/` folder is at root level
+- Check you uploaded `css/style.css`
+- Wait 5 minutes and hard refresh
+- Check browser console (F12) for 404 errors
+
+**404 Error:**
+- Repository name must be `yourusername.github.io`
+- Must be exactly your GitHub username
+- Repository must be Public
+
+**Build Failed:**
+- Go to repository → Actions tab
+- Click the failed build to see error
+- Usually means YAML syntax error in `_config.yml`
+
+**Posts not showing:**
+- Files must be in `_posts/` folder
+- Filename must be `YYYY-MM-DD-title.md`
+- Date must be today or earlier
+- Must have proper frontmatter (see example above)
+
+---
+
+## 📱 Features
+
+- Dark theme with neon green accents
+- Syntax highlighting for code
+- Copy buttons for code blocks
+- Responsive design
+- Fast static site
+- Easy post management
+
+---
+
+## 🎯 Quick Test
+
+After setup, visit your site. You should see:
+
+✅ **Dark background** (not white)  
+✅ **Green text and accents** (not just blue links)  
+✅ **Monospace font** (looks like code editor)  
+✅ **Styled blog post cards** (not just plain lists)  
+✅ **Navigation bar** at top with hover effects  
+
+If you see all of these, **it's working!** 🎉
+
+---
+
+Built for the smart home community 🏠⚡

@@ -1,30 +1,24 @@
 # Site settings
 title: SmartHomeGuy
 description: Home automation projects, tutorials, and code snippets
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://mslmediamyles.github.io" # Update with your GitHub username
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
 permalink: /:year/:month/:day/:title/
 
-# Kramdown settings for better code highlighting
+# Kramdown settings
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    block:
-      line_numbers: true
-
-# Collections
-collections:
-  posts:
-    output: true
-    permalink: /:categories/:year/:month/:day/:title/
+  
+# Plugins - GitHub Pages compatible only
+plugins:
+  - jekyll-feed
 
 # Exclude from processing
 exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+  - TROUBLESHOOTING.md
