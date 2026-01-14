@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">SmartHomeGuy</h1>
+    <p class="hero-subtitle">Automating tomorrow, one script at a time</p>
+  </div>
+  <div class="hero-decoration"></div>
+</div>
+
+<div class="container">
+  <section class="posts-grid">
+    {% for post in site.posts limit:6 %}
+    <article class="post-card">
+      <div class="post-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%B %d, %Y" }}
+        </time>
+        {% if post.category %}
+        <span class="post-category">{{ post.category }}</span>
+        {% endif %}
+      </div>
+      <h2 class="post-title">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h2>
+      <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+      <a href="{{ post.url | relative_url }}" class="read-more">Read article →</a>
+    </article>
+    {% endfor %}
+  </section>
+
+  {% if site.posts.size > 6 %}
+  <div class="view-all">
+    <a href="/archive" class="view-all-link">View all posts</a>
+  </div>
+  {% endif %}
+</div>

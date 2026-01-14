@@ -1,0 +1,148 @@
+---
+layout: default
+title: About
+---
+
+<div class="container">
+  <article class="about-page">
+    <header class="about-header">
+      <h1 class="about-title">About SmartHomeGuy</h1>
+    </header>
+
+    <div class="about-content">
+      <section class="about-section">
+        <h2>Welcome!</h2>
+        <p>I'm passionate about home automation, IoT devices, and making technology work smarter for everyday life. This blog is my digital workshop where I share projects, code snippets, tutorials, and lessons learned from automating my home.</p>
+      </section>
+
+      <section class="about-section">
+        <h2>What You'll Find Here</h2>
+        <ul>
+          <li><strong>Home Automation Projects:</strong> Practical guides for Home Assistant, Node-RED, and other automation platforms</li>
+          <li><strong>IoT Development:</strong> ESP32, Arduino, and Raspberry Pi projects with complete code</li>
+          <li><strong>Code Snippets:</strong> Reusable Python scripts, YAML configurations, and automation blueprints</li>
+          <li><strong>Product Reviews:</strong> Honest assessments of smart home devices and platforms</li>
+          <li><strong>Troubleshooting:</strong> Solutions to common (and uncommon) smart home challenges</li>
+        </ul>
+      </section>
+
+      <section class="about-section">
+        <h2>My Setup</h2>
+        <p>My current smart home stack includes:</p>
+        <ul>
+          <li>Home Assistant (Supervised on Raspberry Pi 4)</li>
+          <li>Node-RED for complex automations</li>
+          <li>ESPHome for custom sensors and devices</li>
+          <li>Zigbee2MQTT for device communication</li>
+          <li>Custom Python scripts for advanced automation</li>
+        </ul>
+      </section>
+
+      <section class="about-section">
+        <h2>Get In Touch</h2>
+        <p>Have questions, suggestions, or want to collaborate? Feel free to reach out:</p>
+        <ul class="contact-links">
+          <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
+          <li><a href="mailto:contact@smarthomeguy.com">Email</a></li>
+        </ul>
+      </section>
+    </div>
+  </article>
+</div>
+
+<style>
+.about-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.about-header {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.about-title {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.about-content {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.about-section {
+  margin-bottom: 2.5rem;
+}
+
+.about-section h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.about-section p {
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+.about-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-section ul li {
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.about-section ul li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+.contact-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.contact-links li::before {
+  display: none;
+}
+
+.contact-links li {
+  padding-left: 0;
+}
+
+.contact-links a {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: var(--color-surface);
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: var(--transition);
+}
+
+.contact-links a:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+</style>
